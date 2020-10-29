@@ -1,0 +1,19 @@
+ng g component "Ten component" - Tao ra component moi
+==========================
+nhom cac component bang module 
+- Dua vao chuc nang de quan ly cac component
+- Module giup chia nho cac component
+- Giup phan chia de quan ly cac component
+ng g module "Ten module"
+- Dat cac selector khac nhau, the phai khac ten nhau
+- Ket noi module la Imports.
+- Neu muon su dung cac component trong 1 module phai export ra ngoai truoc khi dung, 
+vi co tinh dong goi nen phai export truoc khi dung
+========================================
+Khai niem ve template va style
+Khai niem metedata
+Databinding la su giao tiep giua Typescript va HTML (Dong bo giua view va model)
+Cac co che binding
+- One-waybinding
+
+- Two-waybinding
