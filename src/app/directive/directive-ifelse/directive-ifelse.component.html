@@ -1,0 +1,16 @@
+<div *ngIf="status; else templateChuaDangNhap">
+  <button (click)="DangXuat()">Dang Xuat</button>
+  <h1>Xin Chao Long An</h1>
+</div>
+<!-- Mac dinh ng-template khong hien thi truoc
+chi su dung trong pham vi component chua no -->
+<ng-template #templateChuaDangNhap>
+  <div class="form-group">
+      <label for="lname">Ten Dang Nhap</label><br>
+      <input type="text" #tenDN placeholder="Ten Dang Nhap" class="form-control"><br>
+      <label for="lpassword">Mat Khau</label><br>
+      <input type="password" #password placeholder="Mat Khau Dang Nhap" class="form-control"><br>
+    <button (click)="DangNhap(tenDN.value, password.value)" class='btn btn-success'>Dang Nhap</button>
+  </div>
+  <h1 class="text-danger">{{ThongBao}}</h1>
+</ng-template>

@@ -1,2 +1,60 @@
-<p>oneway-binding works!</p>
-<p>Huong Dan Quan Ly</p>
+<!-- Interpolation Binding-->
+<p>{{ name }}</p>
+<p>{{ showNumber }}</p>
+<p>
+  Nam Sinh: {{ showObject.namSinh }} , Ho Ten: {{ showObject.hoTen }}, gioi
+  Tinh: {{ showObject.gioiTinh }}
+</p>
+<!-- Property Binding -->
+<p [innerHTML]="obHocVien.hoTen"></p>
+<p [innerHTML]="obHocVien.gioiTinh"></p>
+
+<!-- Dung interpolation cho Object -->
+<p>Ho Ten: {{ obHocVien.hoTen }} --- Gioi Tinh: {{ obHocVien.gioiTinh }}</p>
+
+<!-- Event Bindin -->
+<!-- Attribute la nhung cai tu them vao trong cac the, 
+thuoc tinh doi tuong, dau # la dai dien doi tuong -->
+<input inputName="ANN" #obInput placeholder="Nhap Ho Ten" />
+<button (click)="ChangeName(obInput)">Doi Ten</button>
+<br />
+
+<!-- Twoway binding -->
+<input placeholder="Nhap Gioi Tinh" [(ngModel)]="obHocVien.hoTen" />
+<!-- <button (click)="ChangeSex(obsex)"
+(click)="ChangeName(obInput)">Doi Gioi Tinh</button> -->
+<!-- Bai Tap Register Form -->
+
+<div class="container mt-5">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter email"
+        [(ngModel)]="emailPrivate"
+      />
+      <small id="emailHelp" class="form-text text-muted"
+        >We'll never share your email with anyone else.</small
+      >
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input
+        #obName
+        type="text"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Password"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="ChageMyname(obName)">
+      Submit
+    </button>
+  <div>
+    <p class="bg-dark" style="color: yellow">Email: {{ emailPrivate }}</p>
+    <p class="bg-dark" style="color: yellow">Ho va Ten: {{ nameFull }}</p>
+  </div>
+</div>

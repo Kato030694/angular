@@ -17,3 +17,10 @@ Cac co che binding
 - One-waybinding
 
 - Two-waybinding
+===========================
+Directive co 3 loai
+- component Directives => cac the selector tu dinh nghia
+- Structura Directives
++ ngIf la 1 thuoc tinh (attribute)
++ ngSwitch
++ ngFor

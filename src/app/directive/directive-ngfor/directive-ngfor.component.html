@@ -1,0 +1,44 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th appHighlight>STT</th>
+        <th appBetterHighlight>MA SV</th>
+        <th>Ho Ten</th>
+        <th>Tuoi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let sv of DanhSachSinhVien; let STT = index">
+        <td>{{ STT + 1}}</td>
+        <td>{{ sv.MaSV }}</td>
+        <td>{{ sv.hoTen }}</td>
+        <td>{{ sv.tuoi }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="container">
+  <h3>Them Sinh Vien</h3>
+  <div class="form-group">
+    <span>Ma Sinh Vien</span>
+    <input type="text" #maSV class="form-control" />
+  </div>
+  <div class="form-group">
+    <span>Ho Ten</span>
+    <input type="text" #hoTen class="form-control" />
+  </div>
+  <div class="form-group">
+    <span>Tuoi</span>
+    <input type="text" #tuoi class="form-control" />
+  </div>
+  <div class="form-group">
+    <button 
+      class="btn" appButtonHover
+      button
+      (click)="ThemSinhVien(maSV.value, hoTen.value, tuoi.value)"
+    >
+      Add SV
+    </button>
+  </div>
+</div>

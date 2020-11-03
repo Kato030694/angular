@@ -1,3 +1,4 @@
+import { DirectiveModule } from './directive/directive.module';
 import { OneWayBindingModule } from './one-way-binding/one-way-binding.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -29,7 +30,8 @@ import { LayoutsModule } from './layouts/layouts.module';
     BrowserModule,
     AppRoutingModule,
     LayoutsModule,
-    OneWayBindingModule
+    OneWayBindingModule,
+    DirectiveModule
   ],
   providers: [],
   bootstrap: [AppComponent]
